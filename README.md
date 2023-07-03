@@ -1,4 +1,4 @@
-# package for manage SMS Gateways
+# Package for manage sms gateways
 
 ## Installation
 
@@ -31,11 +31,11 @@ return [
     */
     'default' => env("SMS_GATEWAY", 'qyadat'),
 
-    'username' => env("SMS_USERNAME", ''),
+    'username' => env("SMS_USERNAME", null),
 
-    'sender' => env("SMS_SENDER", ''),
+    'sender' => env("SMS_SENDER", null),
 
-    'password' => env("SMS_PASSWORD", ''),
+    'password' => env("SMS_PASSWORD", null),
 ];
 ```
 
@@ -43,8 +43,10 @@ return [
 
 ``` php
 use SMS;
+
 SMS::send('message','966512345678');
 
+SMS::message('message')->to('966512345678')->send();
 ```
 
 ## Testing
