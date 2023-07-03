@@ -5,7 +5,7 @@
 You can install the package via composer:
 
 ```bash
-composer require Theamostafa/sms
+composer require theamostafa/sms
 ```
 
 You can publish the config file with:
