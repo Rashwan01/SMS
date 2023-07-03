@@ -1,0 +1,59 @@
+{
+    "name": "theamostafa/sms",
+    "description": "package for manage sms",
+    "version": "1.0.0",
+    "keywords": [
+        "Theamostafa",
+        "sms"
+    ],
+    "homepage": "https://gitlab.com/Theamostafa-php-modules/sms",
+    "license": "MIT",
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/contracts": "^8.0",
+        "illuminate/support": "^8.71",
+        "guzzlehttp/guzzle": "^7.0.1"
+
+    },
+    "require-dev": {
+        "barryvdh/laravel-ide-helper": "^2.13",
+        "orchestra/testbench": "^6.0",
+        "pestphp/pest": "^1.23",
+        "phpunit/phpunit": "^9.3",
+        "vimeo/psalm": "^3.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Theamostafa\\SMS\\": "app",
+            "Theamostafa\\SMS\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Theamostafa\\SMS\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test": "vendor/bin/phpunit --colors=always",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Theamostafa\\SMS\\SMSServiceProvider"
+            ],
+            "aliases": {
+                "SMS": "Theamostafa\\SMS\\Facades\\SMS"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
